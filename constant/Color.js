@@ -4,4 +4,6 @@ export default {
     lightSeaGreen: "#20B2AA",
     darkSeaGreen: "#8FBC8F",
     limeGreen : "#32CD32",
+    lightGray: '#F5F5F5',
+    rgbGray: "rgba(128,128,128,0.5)"
 }

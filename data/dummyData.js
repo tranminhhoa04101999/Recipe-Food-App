@@ -9,7 +9,7 @@ export const CATEGORYS = [
 export const MEALS = [
     new Meal(
         'm1',
-        'c1',
+        'Món mặn',
         'Ếch Xào Lăn',
         'https://i.imgur.com/v76aI8Y.jpg',
         '30p',
@@ -17,7 +17,7 @@ export const MEALS = [
     ),
     new Meal(
         'm2',
-        'c1',
+        'Món mặn',
         'Cơm chiên gà xối mỡ',
         'https://i.imgur.com/y2Zvh3W.jpg',
         '20p',
@@ -25,7 +25,7 @@ export const MEALS = [
     ),
     new Meal(
         'm4',
-        'c2',
+        'Món Chay',
         'Mỳ Chay',
         'https://imgur.com/Aqsio2H.jpg',
         '30p',
