@@ -14,8 +14,7 @@ const HomeNavigator = () => {
         <HomeStack.Navigator screenOptions={{
             headerShown: false
         }}>
-            <HomeStack.Screen name="home" component={HomeScreen}
-            />
+            <HomeStack.Screen name="home" component={HomeScreen}/>
             <HomeStack.Screen name="recipe" component={RecipeScreen} options={{
             }} />
         </HomeStack.Navigator>
@@ -56,10 +55,8 @@ const MainNavigator = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }} >
+                <Stack.Screen name="login" component={LoginScreen} />
                 <Stack.Screen name="tabs" component={tabNavigator} />
-                <Stack.Screen name="login" component={LoginScreen} options={{
-                }}
-                />
             </Stack.Navigator>
         </NavigationContainer>
     )

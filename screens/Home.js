@@ -5,7 +5,7 @@ import CategoryCard from '../components/CategoryCard';
 import Color from '../constant/Color';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import TrendingCard from '../components/TrendingCard';
-import {BlurView} from '@react-native-community/blur';
+import { BlurView } from '@react-native-community/blur';
 
 
 
@@ -57,12 +57,23 @@ const Home = ({ props, navigation }) => {
                                 showsHorizontalScrollIndicator={false}
                                 renderItem={data => {
                                     return (
-                                        <TrendingCard imgUrl= {data.item.imgUrl} categoryId={data.item.categoryId}  />
+                                        <TrendingCard imgUrl={data.item.imgUrl} categoryId={data.item.categoryId}
+                                            name={data.item.name} isBookmark={data.item.isBookmark} minute={data.item.minute}
+                                            serving={data.item.serving}
+                                            onPress={()=>{navigation.navigate('recipe')}}
+                                        />
                                     )
                                 }}
                             >
                             </FlatList>
 
+                        </View>
+                        {/* Category header */}
+                        <View style={styles.categoryHeader}>
+                            <Text style={{ fontFamily: 'OpenSans-Bold', color: Color.gray21, fontSize: 20 }}>Categorys</Text>
+                            <TouchableOpacity>
+                                <Text style={{ color: 'gray', marginRight: 10, }} >View all</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 }
@@ -168,7 +179,16 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
     },
     //#endregion
-
+    //#region Category header
+    categoryHeader: {
+        flex: 1,
+        flexDirection: 'row',
+        marginTop: 5,
+        marginHorizontal: 10,
+        justifyContent: 'space-between',
+        alignItems: 'flex-end'
+    },
+    //#endregion
 
 });
 

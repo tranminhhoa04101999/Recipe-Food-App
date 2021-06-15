@@ -37,7 +37,7 @@ const Login = ({ navigation }) => {
                         <ButtonCustom
                             color={[Color.darkSeaGreen, Color.lightSeaGreen]}
                             title="Login"
-                            onPress={() => { }}
+                            onPress={() => {navigation.replace('tabs') }}
                             style={{
                                 marginTop: 30,
                             }}
